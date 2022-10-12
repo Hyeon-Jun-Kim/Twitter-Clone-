@@ -17,6 +17,7 @@
 		CEFDE22B28F6859600D17D2D /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22A28F6859600D17D2D /* ExploreController.swift */; };
 		CEFDE22D28F685B000D17D2D /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22C28F685B000D17D2D /* NotificationsController.swift */; };
 		CEFDE22F28F685BF00D17D2D /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22E28F685BF00D17D2D /* ConversationsController.swift */; };
+		CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23028F6A1D200D17D2D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEFDE22A28F6859600D17D2D /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		CEFDE22C28F685B000D17D2D /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		CEFDE22E28F685BF00D17D2D /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		CEFDE23028F6A1D200D17D2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		CEFDE22028F6819B00D17D2D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CEFDE23028F6A1D200D17D2D /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				CEFDE22D28F685B000D17D2D /* NotificationsController.swift in Sources */,
 				CEFDE20D28F6804300D17D2D /* AppDelegate.swift in Sources */,
 				CEFDE22F28F685BF00D17D2D /* ConversationsController.swift in Sources */,
+				CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */,
 				CEFDE22B28F6859600D17D2D /* ExploreController.swift in Sources */,
 				CEFDE20F28F6804300D17D2D /* SceneDelegate.swift in Sources */,
 				CEFDE22728F6829800D17D2D /* MainTabController.swift in Sources */,

@@ -10,6 +10,13 @@ import UIKit
 class MainTabController: UITabBarController {
 
     // MARK: - Properties
+    let actionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = .blue
+        button.setImage(UIImage(named: "new_tweet"), for: .normal)
+        return button
+    }()
     
     // MARK: - Lifecycle
     
@@ -17,9 +24,17 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
 
         configeureViewControllers()
+        configureUI()
     }
     
     // MARK: - Helpers
+    
+    func configureUI() {
+        view.addSubview(actionButton)
+        actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
+                            paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
+        actionButton.layer.cornerRadius = 56 / 2
+    }
     
     func configeureViewControllers() {
         let feed = FeedController()
