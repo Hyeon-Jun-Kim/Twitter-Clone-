@@ -20,6 +20,7 @@
 		CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23028F6A1D200D17D2D /* Extensions.swift */; };
 		CEFDE23428F6AA9B00D17D2D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23328F6AA9B00D17D2D /* LoginController.swift */; };
 		CEFDE23628F6ABD900D17D2D /* RegisteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23528F6ABD900D17D2D /* RegisteractionController.swift */; };
+		CEFDE23828F7A2C300D17D2D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23728F7A2C300D17D2D /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CEFDE23028F6A1D200D17D2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CEFDE23328F6AA9B00D17D2D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CEFDE23528F6ABD900D17D2D /* RegisteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteractionController.swift; sourceTree = "<group>"; };
+		CEFDE23728F7A2C300D17D2D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFDE23028F6A1D200D17D2D /* Extensions.swift */,
+				CEFDE23728F7A2C300D17D2D /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				CEFDE22D28F685B000D17D2D /* NotificationsController.swift in Sources */,
 				CEFDE20D28F6804300D17D2D /* AppDelegate.swift in Sources */,
+				CEFDE23828F7A2C300D17D2D /* Utilities.swift in Sources */,
 				CEFDE23628F6ABD900D17D2D /* RegisteractionController.swift in Sources */,
 				CEFDE22F28F685BF00D17D2D /* ConversationsController.swift in Sources */,
 				CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */,
