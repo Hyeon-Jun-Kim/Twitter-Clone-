@@ -73,7 +73,8 @@ class LoginController: UIViewController {
     }
     
     @objc func handleShowSignup(){
-        
+        let controller = RegisteractionController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - Helpers
@@ -100,7 +101,7 @@ class LoginController: UIViewController {
         dontHaveAccountButton.anchor(left: view.leftAnchor,
                                      bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                      right: view.rightAnchor,
-                                     paddingLeft: 60, paddingRight: 40 )
+                                     paddingLeft: 60, paddingRight: 40)
     }
     
 }
