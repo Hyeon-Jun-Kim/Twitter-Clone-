@@ -7,9 +7,11 @@
 
 import UIKit
 
-class RegisteractionController: UIViewController {
+class RegisteractionController: UIViewController{
     
     // MARK: - Properties
+    
+    private let imagePicker = UIImagePickerController()
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -93,7 +95,7 @@ class RegisteractionController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleAddProfilePhoto() {
-        navigationController?.popViewController(animated: true)
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @objc func handleRegisteration() {
@@ -107,6 +109,9 @@ class RegisteractionController: UIViewController {
     // MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         view.addSubview(plusPhotoButton)
         plusPhotoButton .centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
@@ -133,4 +138,22 @@ class RegisteractionController: UIViewController {
                                      paddingLeft: 60, paddingRight: 40)
     }
     
+}
+
+
+extension RegisteractionController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        plusPhotoButton.layer.cornerRadius = 128 / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.imageView?.contentMode = .scaleAspectFit
+        plusPhotoButton.imageView?.clipsToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
