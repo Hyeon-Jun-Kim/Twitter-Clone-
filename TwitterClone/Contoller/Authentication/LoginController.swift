@@ -66,7 +66,7 @@ class LoginController: UIViewController {
         configureUI()
     }
     
-    // MARK: -  Selecto 
+    // MARK: -  Selectors
     
     @objc func handleLogin() {
         guard let email = emailTextField.text else { return }
@@ -78,7 +78,12 @@ class LoginController: UIViewController {
                 return
             }
             
-            print("DEBUG: Successful log in.")
+            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return  }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            
+            tab.authenticateUserAndConfugureUI()
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
