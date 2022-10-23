@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		35B7DA748611F0125C6DBE81 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B452EED56130B55B710D762E /* Pods_TwitterClone.framework */; };
 		CE10394D2905882B00EDE5B7 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10394C2905882B00EDE5B7 /* ProfileHeader.swift */; };
+		CE10394F290594B800EDE5B7 /* ProfileFIlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */; };
+		CE1039512905972A00EDE5B7 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */; };
 		CE55C118290005FB00CF6947 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C117290005FB00CF6947 /* Constants.swift */; };
 		CE55C11A2900441600CF6947 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C1192900441600CF6947 /* AuthService.swift */; };
 		CEAE103E28FA5BBD0090DE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */; };
@@ -42,6 +44,8 @@
 		575422C39B6158D2330A1395 /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 		B452EED56130B55B710D762E /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE10394C2905882B00EDE5B7 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFIlterView.swift; sourceTree = "<group>"; };
+		CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		CE55C117290005FB00CF6947 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE55C1192900441600CF6947 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -180,6 +184,8 @@
 				CECA03E2290315DA00EEBAC4 /* CaptionTextView.swift */,
 				CECA03E8290508EA00EEBAC4 /* TweetCell.swift */,
 				CE10394C2905882B00EDE5B7 /* ProfileHeader.swift */,
+				CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */,
+				CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				CEBEC5E62902874A001A3BF7 /* UserService.swift in Sources */,
 				CEFDE22D28F685B000D17D2D /* NotificationsController.swift in Sources */,
 				CECA03E3290315DA00EEBAC4 /* CaptionTextView.swift in Sources */,
+				CE1039512905972A00EDE5B7 /* ProfileFilterCell.swift in Sources */,
 				CEFDE20D28F6804300D17D2D /* AppDelegate.swift in Sources */,
 				CEFDE23828F7A2C300D17D2D /* Utilities.swift in Sources */,
 				CEFDE23628F6ABD900D17D2D /* RegisteractionController.swift in Sources */,
@@ -346,6 +353,7 @@
 				CECA03EB290550A800EEBAC4 /* TweetViewModel.swift in Sources */,
 				CEFDE23428F6AA9B00D17D2D /* LoginController.swift in Sources */,
 				CEFDE22928F684F100D17D2D /* FeedController.swift in Sources */,
+				CE10394F290594B800EDE5B7 /* ProfileFIlterView.swift in Sources */,
 				CE55C118290005FB00CF6947 /* Constants.swift in Sources */,
 				CECA03E72904FE4700EEBAC4 /* Tweet.swift in Sources */,
 				CECA03E529031AC300EEBAC4 /* TweetService.swift in Sources */,
