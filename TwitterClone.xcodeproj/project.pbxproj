@@ -11,6 +11,7 @@
 		CE10394D2905882B00EDE5B7 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10394C2905882B00EDE5B7 /* ProfileHeader.swift */; };
 		CE10394F290594B800EDE5B7 /* ProfileFIlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */; };
 		CE1039512905972A00EDE5B7 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */; };
+		CE1039532906336900EDE5B7 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1039522906336900EDE5B7 /* ProfileHeaderViewModel.swift */; };
 		CE55C118290005FB00CF6947 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C117290005FB00CF6947 /* Constants.swift */; };
 		CE55C11A2900441600CF6947 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C1192900441600CF6947 /* AuthService.swift */; };
 		CEAE103E28FA5BBD0090DE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */; };
@@ -46,6 +47,7 @@
 		CE10394C2905882B00EDE5B7 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFIlterView.swift; sourceTree = "<group>"; };
 		CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
+		CE1039522906336900EDE5B7 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		CE55C117290005FB00CF6947 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE55C1192900441600CF6947 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				CECA03EA290550A800EEBAC4 /* TweetViewModel.swift */,
+				CE1039522906336900EDE5B7 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				CECA03E9290508EA00EEBAC4 /* TweetCell.swift in Sources */,
 				CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */,
 				CE55C11A2900441600CF6947 /* AuthService.swift in Sources */,
+				CE1039532906336900EDE5B7 /* ProfileHeaderViewModel.swift in Sources */,
 				CECA03E12903093200EEBAC4 /* UploadTweetController.swift in Sources */,
 				CEBEC5E829028EBC001A3BF7 /* User.swift in Sources */,
 				CEFDE22B28F6859600D17D2D /* ExploreController.swift in Sources */,
