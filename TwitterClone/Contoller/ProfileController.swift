@@ -14,7 +14,7 @@ class ProfileController: UICollectionViewController {
     
     // MARK: - Properties
 
-    private let user: User
+    private var user: User
     
     private var tweets = [Tweet]() {
         didSet { collectionView.reloadData() }
@@ -100,9 +100,17 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 // MARK: - ProfileHeaderDelegte
 
 extension ProfileController: ProfileHeaderDelegte {
+    
     func handleEditProfileFollow(_ header: ProfileHeader) {
-        UserService.shared.followUser(uid: user.uid) { (ref, err) in
-            
+        
+        if user.isFollowed {
+            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+                self.user.isFollowed = false
+            }
+        } else {
+            UserService.shared.followUser(uid: user.uid) { (ref, err) in
+                self.user.isFollowed = true
+            }
         }
     }
     
