@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol ProfileHeaderDelegte: class {
+    func handleDeismissall()
+}
+
 class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Properties
@@ -15,7 +19,7 @@ class ProfileHeader: UICollectionReusableView {
     var user: User? {
         didSet { configure() }
     }
-    
+    weak var delegate: ProfileHeaderDelegte?
     private let filterBar = ProfileFilterView()
     
     private lazy var containerView: UIView = {
@@ -165,7 +169,7 @@ class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Selectors
     @objc func handleDismissal() {
-        
+        delegate?.handleDeismissall()
     }
     
     @objc func handleEditProfileFollow() {
