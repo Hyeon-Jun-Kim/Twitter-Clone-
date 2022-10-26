@@ -79,7 +79,6 @@ class ProfileController: UICollectionViewController {
 
 extension ProfileController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(tweets.count)
         return tweets.count
     }
     
