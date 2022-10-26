@@ -12,7 +12,7 @@ class UploadTweetController: UIViewController {
     // MARK: - Properties
     
     private let user: User
-    private let config: UploaddTweetConfiguartion
+    private let config: UploadTweetConfiguration
     private lazy var viewModel = UploadTweetViewModel(config: config)
     
     private lazy var actionButton: UIButton = {
@@ -53,7 +53,7 @@ class UploadTweetController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(user: User, config: UploaddTweetConfiguartion) {
+    init(user: User, config: UploadTweetConfiguration) {
         self.user = user
         self.config = config
         super.init(nibName: nil, bundle: nil)
@@ -66,13 +66,6 @@ class UploadTweetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
-        switch config {
-        case .tweet:
-            print("DEBUG: Config is tweet")
-        case .reply(let tweet):
-            print("DEBIG: Replying to \(tweet.caption)")
-        }
       }
     
     // MARK: - Selectors
@@ -86,7 +79,7 @@ class UploadTweetController: UIViewController {
     func handleUploadTweet() {
         guard let caption = captionTextView.text else { return }
         
-        TweetService.shared.uploadTweet(caption: caption) { (error, ref) in
+        TweetService.shared.uploadTweet(type: config, caption: caption) { (error, ref) in
             if let error = error {
                 print("DEBUG: Failed to upload tweet with \(error.localizedDescription)")
                 return
