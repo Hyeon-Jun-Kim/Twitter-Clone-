@@ -7,11 +7,13 @@
 
 import UIKit
 
-class UploadTweerController: UIViewController {
+class UploadTweetController: UIViewController {
     
     // MARK: - Properties
     
     private let user: User
+    private let config: UploaddTweetConfiguartion
+    private lazy var viewModel = UploadTweetViewModel(config: config)
     
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -42,8 +44,9 @@ class UploadTweerController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(user: User) {
+    init(user: User, config: UploaddTweetConfiguartion) {
         self.user = user
+        self.config = config
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -54,6 +57,13 @@ class UploadTweerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        switch config {
+        case .tweet:
+            print("DEBUG: Config is tweet")
+        case .reply(let tweet):
+            print("DEBIG: Replying to \(tweet.caption)")
+        }
       }
     
     // MARK: - Selectors
