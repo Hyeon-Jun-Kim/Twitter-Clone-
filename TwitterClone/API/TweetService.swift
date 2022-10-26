@@ -28,7 +28,7 @@ struct TweetService {
                 REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
             }
         case .reply(let tweet):
-            REF_TWEETREPLIES.child(tweet.tweetID).childByAutoId().updateChildValues(values, withCompletionBlock: completion)
+            REF_TWEET_REPLIES.child(tweet.tweetID).childByAutoId().updateChildValues(values, withCompletionBlock: completion)
         }
     }
     
@@ -69,7 +69,7 @@ struct TweetService {
     func fetchReplies(forTweet tweet: Tweet, completion: @escaping([Tweet]) -> Void){
         var tweets = [Tweet]()
         
-        REF_TWEETREPLIES.child(tweet.tweetID).observe(.childAdded) { snapshot in
+        REF_TWEET_REPLIES.child(tweet.tweetID).observe(.childAdded) { snapshot in
             guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
             guard let uid = dictionary["uid"] as? String else { return }
             let tweetID = snapshot.key
@@ -78,6 +78,22 @@ struct TweetService {
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
                 tweets.append(tweet)
                 completion(tweets)
+            }
+        }
+    }
+    
+    func likeTweet(tweet: Tweet, completion: @escaping(DatabaseCompletion)) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let likes = tweet.didLike ? tweet.likes - 1 : tweet.likes + 1
+        REF_TWEETS.child(tweet.tweetID).child("likes").setValue(likes)
+        
+        if tweet.didLike {
+            // unlike tweet
+        } else {
+            // like tweet
+            REF_USER_LIKES.child(uid).updateChildValues([tweet.tweetID: 1]) { (err, ref) in
+                REF_TWEET_LIKES.child(tweet.tweetID).updateChildValues([uid: 1], withCompletionBlock: completion)
             }
         }
     }
