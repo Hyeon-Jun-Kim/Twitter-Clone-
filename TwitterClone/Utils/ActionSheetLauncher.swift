@@ -28,6 +28,29 @@ class ActionSheetLauncher: NSObject {
         return view
     }()
     
+    private lazy var footerView: UIView = {
+        let view = UIView()
+        
+        view.addSubview(cancelButton)
+        cancelButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        cancelButton.anchor(left: view.leftAnchor, right: view.rightAnchor,
+                            paddingLeft: 12, paddingRight: 12)
+        cancelButton.centerY(inView: view)
+        cancelButton.layer.cornerRadius = 50 / 2
+        
+        return view
+    }()
+    
+    private lazy var cancelButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Cancel", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .systemGroupedBackground
+        button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     init(user: User){
@@ -57,17 +80,18 @@ class ActionSheetLauncher: NSObject {
         blackView.frame = window.frame
         
         window.addSubview(tableview)
+        let height = CGFloat(3 * 60) + 100
         tableview.frame = CGRect(x: 0, y: window.frame.height,
-                                 width: window.frame.width, height: 300)
+                                 width: window.frame.width, height: height)
         
         UIView.animate(withDuration: 0.5) {
             self.blackView.alpha = 1
-            self.tableview.frame.origin.y -= 300
+            self.tableview.frame.origin.y -= height
         }
     }
     
     func configureTableView() {
-        tableview.backgroundColor = .twitterBlue
+        tableview.backgroundColor = .white
         tableview.delegate = self
         tableview.dataSource = self
         tableview.rowHeight = 60
@@ -75,7 +99,7 @@ class ActionSheetLauncher: NSObject {
         tableview.layer.cornerRadius = 5
         tableview.isScrollEnabled = false
         
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableview.register(ActionSheetCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
@@ -85,7 +109,7 @@ extension ActionSheetLauncher: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ActionSheetCell
         return cell
     }
     
@@ -93,5 +117,10 @@ extension ActionSheetLauncher: UITableViewDataSource {
 }
 
 extension ActionSheetLauncher: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
 }
