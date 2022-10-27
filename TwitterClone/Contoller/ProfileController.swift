@@ -124,15 +124,16 @@ extension ProfileController: ProfileHeaderDelegte {
             UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
                 self.user.isFollowed = false
                 self.collectionView.reloadData()
-                self.fetchUserStats()
             }
         } else {
             UserService.shared.followUser(uid: user.uid) { (ref, err) in
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
-                self.fetchUserStats()
+                
+                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
             }
         }
+        self.fetchUserStats()
     }
     
     func handleDeismissall() {
