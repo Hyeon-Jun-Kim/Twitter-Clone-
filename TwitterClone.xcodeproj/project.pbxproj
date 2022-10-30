@@ -22,6 +22,7 @@
 		CEAE103E28FA5BBD0090DE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */; };
 		CEBEC5E62902874A001A3BF7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E52902874A001A3BF7 /* UserService.swift */; };
 		CEBEC5E829028EBC001A3BF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E729028EBC001A3BF7 /* User.swift */; };
+		CEC0213E290E354E0061BE8B /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0213D290E354E0061BE8B /* NotificationViewModel.swift */; };
 		CEC1FECC2909456E001AFB0F /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1FECB2909456E001AFB0F /* ActionSheetLauncher.swift */; };
 		CEC1FECE29097715001AFB0F /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1FECD29097715001AFB0F /* ActionSheetCell.swift */; };
 		CEC1FED029099E45001AFB0F /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1FECF29099E45001AFB0F /* ActionSheetViewModel.swift */; };
@@ -68,6 +69,7 @@
 		CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CEBEC5E52902874A001A3BF7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CEBEC5E729028EBC001A3BF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEC0213D290E354E0061BE8B /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		CEC1FECB2909456E001AFB0F /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		CEC1FECD29097715001AFB0F /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		CEC1FECF29099E45001AFB0F /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				CE1039522906336900EDE5B7 /* ProfileHeaderViewModel.swift */,
 				CE10395A290830FD00EDE5B7 /* UploadTweetViewModel.swift */,
 				CEC1FECF29099E45001AFB0F /* ActionSheetViewModel.swift */,
+				CEC0213D290E354E0061BE8B /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				CEFDE23828F7A2C300D17D2D /* Utilities.swift in Sources */,
 				CEC1FECE29097715001AFB0F /* ActionSheetCell.swift in Sources */,
 				CEFDE23628F6ABD900D17D2D /* RegisteractionController.swift in Sources */,
+				CEC0213E290E354E0061BE8B /* NotificationViewModel.swift in Sources */,
 				CEFDE22F28F685BF00D17D2D /* ConversationsController.swift in Sources */,
 				CE1039572907AF0400EDE5B7 /* TweetController.swift in Sources */,
 				CECA03ED290559FF00EEBAC4 /* ProfileController.swift in Sources */,
