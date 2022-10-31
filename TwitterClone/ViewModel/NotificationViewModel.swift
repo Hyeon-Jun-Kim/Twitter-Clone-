@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class NotificationViewModel {
     
     private let notification: Notification
