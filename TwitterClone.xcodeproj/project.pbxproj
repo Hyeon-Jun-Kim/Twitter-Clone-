@@ -20,6 +20,8 @@
 		CE55C118290005FB00CF6947 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C117290005FB00CF6947 /* Constants.swift */; };
 		CE55C11A2900441600CF6947 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55C1192900441600CF6947 /* AuthService.swift */; };
 		CE79A3DB29118EFD004AA7A2 /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */; };
+		CE79A3DD29119434004AA7A2 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DC29119433004AA7A2 /* EditProfileViewModel.swift */; };
+		CE79A3DF291194D0004AA7A2 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */; };
 		CEAE103E28FA5BBD0090DE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */; };
 		CEBEC5E62902874A001A3BF7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E52902874A001A3BF7 /* UserService.swift */; };
 		CEBEC5E829028EBC001A3BF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E729028EBC001A3BF7 /* User.swift */; };
@@ -69,6 +71,8 @@
 		CE55C117290005FB00CF6947 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE55C1192900441600CF6947 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
+		CE79A3DC29119433004AA7A2 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
 		CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CEBEC5E52902874A001A3BF7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CEBEC5E729028EBC001A3BF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				CE10394E290594B800EDE5B7 /* ProfileFIlterView.swift */,
 				CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */,
 				CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */,
+				CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				CE10395A290830FD00EDE5B7 /* UploadTweetViewModel.swift */,
 				CEC1FECF29099E45001AFB0F /* ActionSheetViewModel.swift */,
 				CEC0213D290E354E0061BE8B /* NotificationViewModel.swift */,
+				CE79A3DC29119433004AA7A2 /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				CECA03ED290559FF00EEBAC4 /* ProfileController.swift in Sources */,
 				CE10395B290830FD00EDE5B7 /* UploadTweetViewModel.swift in Sources */,
 				CE10394D2905882B00EDE5B7 /* ProfileHeader.swift in Sources */,
+				CE79A3DF291194D0004AA7A2 /* EditProfileCell.swift in Sources */,
 				CECA03E9290508EA00EEBAC4 /* TweetCell.swift in Sources */,
 				CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */,
 				CEC1FED2290AC7EC001AFB0F /* Notification.swift in Sources */,
@@ -414,6 +421,7 @@
 				CECA03EB290550A800EEBAC4 /* TweetViewModel.swift in Sources */,
 				CEC1FED029099E45001AFB0F /* ActionSheetViewModel.swift in Sources */,
 				CE2153A7290AF6F80076EEAC /* NotificationCell.swift in Sources */,
+				CE79A3DD29119434004AA7A2 /* EditProfileViewModel.swift in Sources */,
 				CEFDE23428F6AA9B00D17D2D /* LoginController.swift in Sources */,
 				CEFDE22928F684F100D17D2D /* FeedController.swift in Sources */,
 				CE10394F290594B800EDE5B7 /* ProfileFIlterView.swift in Sources */,
