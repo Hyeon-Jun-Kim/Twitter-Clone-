@@ -197,6 +197,7 @@ class ProfileHeader: UICollectionReusableView {
 extension ProfileHeader: ProfileFilterViewDelegate {
     func filterView(_ view: ProfileFilterView, didSelect index: Int) {
         guard let filter = ProfileFilterOptions(rawValue: index) else { return }
+        
         delegate?.didselect(filter: filter)
     }
 }
