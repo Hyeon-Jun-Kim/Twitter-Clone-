@@ -136,7 +136,14 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
 // MARK: - TweetCellDelegate
 
 extension FeedController: TweetCellDelegate {
-    func handelLikeTapped(_ cell: TweetCell) {
+    func handleFetchUser(withUsername username: String) {
+        UserService.shared.fetchUser(withUsername: username) { user in
+            let contoller = ProfileController(user: user)
+            self.navigationController?.pushViewController(contoller, animated: true)
+        }
+    }
+    
+    func handleLikeTapped(_ cell: TweetCell) {
         guard var tweet = cell.tweet else { return }
         
         TweetService.shared.likeTweet(tweet: tweet) { (err, ref) in
