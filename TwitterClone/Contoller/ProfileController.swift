@@ -180,7 +180,7 @@ extension ProfileController: ProfileHeaderDelegte {
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
                 
-                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
+                NotificationService.shared.uploadNotification(touser: self.user, type: .follow)
             }
         }
         self.fetchUserStats()
