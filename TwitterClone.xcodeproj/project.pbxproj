@@ -47,7 +47,7 @@
 		CEFDE21928F6804600D17D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFDE21728F6804600D17D2D /* LaunchScreen.storyboard */; };
 		CEFDE22728F6829800D17D2D /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22628F6829800D17D2D /* MainTabController.swift */; };
 		CEFDE22928F684F100D17D2D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22828F684F100D17D2D /* FeedController.swift */; };
-		CEFDE22B28F6859600D17D2D /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22A28F6859600D17D2D /* ExploreController.swift */; };
+		CEFDE22B28F6859600D17D2D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22A28F6859600D17D2D /* SearchController.swift */; };
 		CEFDE22D28F685B000D17D2D /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22C28F685B000D17D2D /* NotificationsController.swift */; };
 		CEFDE22F28F685BF00D17D2D /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE22E28F685BF00D17D2D /* ConversationsController.swift */; };
 		CEFDE23128F6A1D200D17D2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDE23028F6A1D200D17D2D /* Extensions.swift */; };
@@ -101,7 +101,7 @@
 		CEFDE21A28F6804600D17D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFDE22628F6829800D17D2D /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		CEFDE22828F684F100D17D2D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		CEFDE22A28F6859600D17D2D /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		CEFDE22A28F6859600D17D2D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CEFDE22C28F685B000D17D2D /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		CEFDE22E28F685BF00D17D2D /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		CEFDE23028F6A1D200D17D2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 				CEFDE23228F6AA7800D17D2D /* Authentication */,
 				CEFDE22628F6829800D17D2D /* MainTabController.swift */,
 				CEFDE22828F684F100D17D2D /* FeedController.swift */,
-				CEFDE22A28F6859600D17D2D /* ExploreController.swift */,
+				CEFDE22A28F6859600D17D2D /* SearchController.swift */,
 				CEFDE22C28F685B000D17D2D /* NotificationsController.swift */,
 				CEFDE22E28F685BF00D17D2D /* ConversationsController.swift */,
 				CECA03E02903093200EEBAC4 /* UploadTweetController.swift */,
@@ -416,7 +416,7 @@
 				CECA03E12903093200EEBAC4 /* UploadTweetController.swift in Sources */,
 				CEBEC5E829028EBC001A3BF7 /* User.swift in Sources */,
 				CE79A3DB29118EFD004AA7A2 /* EditProfileHeader.swift in Sources */,
-				CEFDE22B28F6859600D17D2D /* ExploreController.swift in Sources */,
+				CEFDE22B28F6859600D17D2D /* SearchController.swift in Sources */,
 				CEFDE20F28F6804300D17D2D /* SceneDelegate.swift in Sources */,
 				CEC1FED4290AED08001AFB0F /* NotificationService.swift in Sources */,
 				CEFDE22728F6829800D17D2D /* MainTabController.swift in Sources */,
