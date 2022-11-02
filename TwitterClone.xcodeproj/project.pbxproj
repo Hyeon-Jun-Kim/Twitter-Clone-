@@ -22,6 +22,7 @@
 		CE79A3DB29118EFD004AA7A2 /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */; };
 		CE79A3DD29119434004AA7A2 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DC29119433004AA7A2 /* EditProfileViewModel.swift */; };
 		CE79A3DF291194D0004AA7A2 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */; };
+		CE9049842912E6E900E1A4BB /* EditProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9049832912E6E900E1A4BB /* EditProfileFooter.swift */; };
 		CEAE103E28FA5BBD0090DE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */; };
 		CEBEC5E62902874A001A3BF7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E52902874A001A3BF7 /* UserService.swift */; };
 		CEBEC5E829028EBC001A3BF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC5E729028EBC001A3BF7 /* User.swift */; };
@@ -73,6 +74,7 @@
 		CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
 		CE79A3DC29119433004AA7A2 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
+		CE9049832912E6E900E1A4BB /* EditProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFooter.swift; sourceTree = "<group>"; };
 		CEAE103D28FA5BBD0090DE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CEBEC5E52902874A001A3BF7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CEBEC5E729028EBC001A3BF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				CE1039502905972A00EDE5B7 /* ProfileFilterCell.swift */,
 				CE79A3DA29118EFD004AA7A2 /* EditProfileHeader.swift */,
 				CE79A3DE291194D0004AA7A2 /* EditProfileCell.swift */,
+				CE9049832912E6E900E1A4BB /* EditProfileFooter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				CEC1FED029099E45001AFB0F /* ActionSheetViewModel.swift in Sources */,
 				CE2153A7290AF6F80076EEAC /* NotificationCell.swift in Sources */,
 				CE79A3DD29119434004AA7A2 /* EditProfileViewModel.swift in Sources */,
+				CE9049842912E6E900E1A4BB /* EditProfileFooter.swift in Sources */,
 				CEFDE23428F6AA9B00D17D2D /* LoginController.swift in Sources */,
 				CEFDE22928F684F100D17D2D /* FeedController.swift in Sources */,
 				CE10394F290594B800EDE5B7 /* ProfileFIlterView.swift in Sources */,
