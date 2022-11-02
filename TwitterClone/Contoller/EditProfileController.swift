@@ -9,6 +9,10 @@ import UIKit
 
 private let reuserIdentifier = "EditProfileCell"
 
+protocol EditProfileControllerDelegate: class {
+    func controller(_ controller: EditProfileController, wantsToUpdate user: User)
+}
+
 class EditProfileController: UITableViewController {
     
     // MARK: - Properties
@@ -19,6 +23,9 @@ class EditProfileController: UITableViewController {
     private var selectedImage: UIImage? {
         didSet { headerView.profileImageView.image = selectedImage }
     }
+    private var userInfoChanged = false
+    
+    weak var delegate: EditProfileControllerDelegate?
     
     // MARK: - Lifecycle
     
@@ -39,6 +46,15 @@ class EditProfileController: UITableViewController {
         configureTableView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
     // MARK: - Selectors
     
     @objc func handleCancel() {
@@ -46,10 +62,16 @@ class EditProfileController: UITableViewController {
     }
     
     @objc func handleDone() {
-        dismiss(animated: true)
+        updateUserData()
     }
     
     // MARK: - API
+    
+    func updateUserData() {
+        UserService.shared.saveUserData(user: user) { err, ref in
+            self.delegate?.controller(self, wantsToUpdate: self.user)
+        }
+    }
     
     // MARK: - Helpers
     
@@ -87,6 +109,8 @@ class EditProfileController: UITableViewController {
     }
 }
 
+// MARK: - UITableViewDataSourse
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return EditProfileOptions.allCases.count
@@ -105,6 +129,8 @@ extension EditProfileController {
 
 }
 
+// MARK: - UITableViewDataDelegate
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let option = EditProfileOptions(rawValue: indexPath.row) else { return 0 }
@@ -112,11 +138,15 @@ extension EditProfileController {
     }
 }
 
+// MARK: - EditProfileHeaderDelegate
+
 extension EditProfileController: EditProfileHeaderDelegate {
     func didTapCHangeProfilePhoto() {
         present(imagePicker, animated: true)
     }
 }
+
+// MARK: - UIImagePickerControllerDelegate
 
 extension EditProfileController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -129,9 +159,13 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
     }
 }
 
+// MARK: - EditProfileCellDelegate
+
 extension EditProfileController: EditProfileCellDelegate {
     func updateUserInfo(_ cell: EditProfileCell) {
         guard let viewModel = cell.viewModel else { return }
+        userInfoChanged = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
         
         switch viewModel.option {
         case .fullname:
@@ -144,6 +178,5 @@ extension EditProfileController: EditProfileCellDelegate {
             user.bio = cell.bioTextView.text!
         }
         
-        print("DEBUG: user fullname is \(user.fullname), user name is \(user.username), bio is \(user.bio)")
     }
 }
