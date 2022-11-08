@@ -15,25 +15,25 @@ Swift 5, Firebase 및 MVVM 아키텍처를 사용하여 iOS 13용 Twitter Clone 
 
 Twitter CloneCoading Project 
 
-- 사용 기술 및 라이브러리
-    Swift, iOS
-    FireBase
-    CocoaPod(Active Label, SDWebImage)
-    MVVM Pattern
+### 사용 기술 및 라이브러리
+- Swift, iOS
+- FireBase
+- CocoaPod(Active Label, SDWebImage)
+- MVVM Pattern
    
-- 구현 기능
-    로그인 & 회원가입
-    트윗 작성 & 게시글 좋아요 기능
-    댓글 & 멘션
-    Tag & HashTag
-    사용자 검색
-    프로필 페이지(프로필 정보 수정 & 트윗 필터링)
-    Follow & Unfollow
-    Follow, mention 알림(Notification)
+### 구현 기능
+- 로그인 & 회원가입
+- 트윗 작성 & 게시글 좋아요 기능
+- 댓글 & 멘션
+- Tag & HashTag
+- 사용자 검색
+- 프로필 페이지(프로필 정보 수정 & 트윗 필터링)
+- Follow & Unfollow
+- Follow, mention 알림(Notification)
     
-- 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
+### 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
 
-- 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
+### 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
 
 <br/>
 
