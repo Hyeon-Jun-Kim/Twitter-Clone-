@@ -31,9 +31,9 @@ Twitter CloneCoading Project
 - Follow & Unfollow
 - Follow, mention 알림(Notification)
     
-### 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
+#### 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
 
-### 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
+#### 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
 
 <br/>
 
