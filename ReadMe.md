@@ -4,6 +4,7 @@
 ![background](./background.png) 
 
 <img width="1440" alt="AppStore" src="https://user-images.githubusercontent.com/59905688/200632348-2b9642f7-4484-4e08-9b13-4c76824afaa9.png">
+
 ![GitHub top language](https://img.shields.io/github/languages/top/Hyeon-Jun-Kim/Programmers.svg?color=darkgreen&logo=swift)  ![GitHub last commit](https://img.shields.io/github/last-commit/Hyeon-Jun-Kim/Programmers.svg?color=cc33ff)
 
 ## 프로젝트 소개
@@ -26,7 +27,6 @@ WaterForCoffee는 brewing water chemistry log Application 입니다.
 
 ## Architecture
 ![Architecture](https://user-images.githubusercontent.com/59905688/200632487-a1900bb0-9efa-47ca-9d0a-15eb2d3c480a.png)
-c76824afaa9.png">
 
 ## Foldering
 ```
