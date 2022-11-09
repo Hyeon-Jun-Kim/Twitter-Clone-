@@ -95,7 +95,7 @@ TwitterClone
 
 ### UI
 
-<img width="415" alt="스크린샷 2022-11-09 오후 2 11 12" src="https://user-images.githubusercontent.com/59905688/200744169-a2de9812-5ca4-4fbb-92ca-1559d340471a.png" width="40%" height="40%">
+
 
 ### Trouble Shooting
 #### Table View cell Event 문제
