@@ -34,7 +34,7 @@ Twitter CloneCoading Project
 <br/>
 
 ## Architecture
-![Architecture](https://user-images.githubusercontent.com/59905688/200632487-a1900bb0-9efa-47ca-9d0a-15eb2d3c480a.png)
+![WaterForCoffee_Architecture 001](https://user-images.githubusercontent.com/59905688/200747092-a296fe6e-9b99-4f3c-8c3c-a9d89c884848.png)
 
 ## Foldering
 ```
