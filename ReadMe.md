@@ -32,6 +32,8 @@ Twitter CloneCoading Project
 - 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
 <br/>
 
+## Architecture
+
 ## Foldering
 ```
 TwitterClone
@@ -191,3 +193,4 @@ TwitterClone
             }
         ```
 
+- 
