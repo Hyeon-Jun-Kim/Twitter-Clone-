@@ -94,7 +94,6 @@ class FeedController: UICollectionViewController {
     func configureLeftBarButton() {
         guard let user = user else { return }
 
-        
         let profileImageView = UIImageView()
         profileImageView.setDimensions(width: 32, height: 32)
         profileImageView.layer.cornerRadius = 32 / 2

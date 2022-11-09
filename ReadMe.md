@@ -11,30 +11,27 @@ Swift 5, Firebase 및 MVVM 아키텍처를 사용하여 iOS 13용 Twitter Clone 
 
 Twitter CloneCoading Project 
 
-### 사용 기술 및 라이브러리
-- Swift, iOS
-- FireBase
-- CocoaPod(Active Label, SDWebImage)
-- MVVM Pattern
+- 사용 기술 및 라이브러리
+    + Swift, iOS
+    + FireBase
+    + CocoaPod(Active Label, SDWebImage)
+    + MVVM Pattern
    
-### 구현 기능
-- 로그인 & 회원가입
-- 트윗 작성 & 게시글 좋아요 기능
-- 댓글 & 멘션
-- Tag & HashTag
-- 사용자 검색
-- 프로필 페이지(프로필 정보 수정 & 트윗 필터링)
-- Follow & Unfollow
-- Follow, mention 알림(Notification)
+- 구현 기능
+    + 로그인 & 회원가입
+    + 트윗 작성 & 게시글 좋아요 기능
+    + 댓글 & 멘션
+    + Tag & HashTag
+    + 사용자 검색
+    + 프로필 페이지(프로필 정보 수정 & 트윗 필터링)
+    + Follow & Unfollow
+    + Follow, mention 알림(Notification)
     
-#### 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
+- 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
 
-#### 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
+- 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
 
 <br/>
-
-## Architecture
-![WaterForCoffee_Architecture 001](https://user-images.githubusercontent.com/59905688/200747092-a296fe6e-9b99-4f3c-8c3c-a9d89c884848.png)
 
 ## Foldering
 ```
@@ -91,11 +88,19 @@ TwitterClone
     └── ActionSheetLauncher
 ```
 
-## Feature-1. 
-
 ### UI
 
+|1. Login |2. Main |3. Tweet |4. Search User |5. Notification |6. Profile |7. Edit Profile |
+|-|-|-|-|-|
+|<img width="361" alt="스크린샷 2022-11-09 오후 4 37 19" src="https://user-images.githubusercontent.com/59905688/200768108-9d2d50b9-500b-444f-9feb-c7e2ed6c6dde.png">|
+<img width="363" alt="스크린샷 2022-11-09 오후 4 37 53" src="https://user-images.githubusercontent.com/59905688/200768177-51171885-e207-4a74-b146-a1a0986908eb.png">|
+<img width="361" alt="스크린샷 2022-11-09 오후 4 38 18" src="https://user-images.githubusercontent.com/59905688/200768228-4a1a7994-6bb6-46d2-9381-ed36362010d3.png">|
+<img width="363" alt="스크린샷 2022-11-09 오후 4 38 39" src="https://user-images.githubusercontent.com/59905688/200768313-701bbef8-eb79-424f-a8eb-e8dc3245bb76.png">|
+<img width="362" alt="스크린샷 2022-11-09 오후 4 38 56" src="https://user-images.githubusercontent.com/59905688/200768507-2d545b02-da83-4b2b-9e71-9ac11f5895bb.png">|
+<img width="360" alt="스크린샷 2022-11-09 오후 4 39 14" src="https://user-images.githubusercontent.com/59905688/200768578-a8942b0d-35f2-425f-89b7-f93e26bb5995.png">|
+<img width="363" alt="스크린샷 2022-11-09 오후 4 39 32" src="https://user-images.githubusercontent.com/59905688/200768630-ce52e4f1-7b8f-46b5-9d0b-9f9b59dafdf3.png">|
 
+## Feature-1. 
 
 ### Trouble Shooting
 #### Table View cell Event 문제
