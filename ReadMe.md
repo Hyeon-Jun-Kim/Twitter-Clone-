@@ -1,10 +1,6 @@
 # Twitter Clone Project
 > Twitter iOS Clone | Swift 5/Firebase | No Storyboards | MVVM
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 Swift 5, Firebase 및 MVVM 아키텍처를 사용하여 iOS 13용 Twitter Clone 구축 프로젝트
 
 ![background](./background.jpeg)
@@ -99,6 +95,7 @@ TwitterClone
 
 ### UI
 
+<img width="608" alt="스크린샷 2022-11-09 오전 3 03 02" src="https://user-images.githubusercontent.com/59905688/200641324-54adad09-87b3-413e-8d61-393f90e92faa.png" width="40%" height="40%">
 
 ### Trouble Shooting
 #### Table View cell Event 문제
