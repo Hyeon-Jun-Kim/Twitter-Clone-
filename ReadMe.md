@@ -34,6 +34,7 @@ Twitter CloneCoading Project
 
 ## Architecture
 
+
 ## Foldering
 ```
 TwitterClone
@@ -193,4 +194,12 @@ TwitterClone
             }
         ```
 
-- 
+- FireBase
+    + FireBase를 통해 계정정보와 Tweet 데이터를 관리하는 실시간 데이터베이스를 구현했습니다.
+    + Profile 페이지에서 좋아요를 누른 게시글을 불러올 때 단순 탐색을 하게 된다면 모든 게시글을 확인해야하기 때문에 긴 시간이 소요되게 됩니다. 이러한 탐색 시간을 줄이기 위해 user-likes 탭을 만들어 보다 효율적인 데이터베이스를 설계하였습니다.
+    + <Authentication>
+    <img width="1157" alt="Authentication" src="https://user-images.githubusercontent.com/59905688/200845237-3a7e33b5-c453-419c-a2fc-f4514e4bb866.png">
+    + <Storage>
+    <img width="1160" alt="Storage" src="https://user-images.githubusercontent.com/59905688/200845259-e80ba471-8145-4da9-99ea-cd795c1095c2.png">
+    + <Realtime Database>
+    <img width="1165" alt="Realtime Database" src="https://user-images.githubusercontent.com/59905688/200845268-3620b2a1-5c3e-42f7-bec8-bfca6955c693.png">
