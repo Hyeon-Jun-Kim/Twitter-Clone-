@@ -89,9 +89,8 @@ TwitterClone
 
 ### UI
 
-|1. Login |2. Main |3. Tweet |4. Search User |5. Notification |6. Profile |7. Edit Profile |
-|-|-|-|-|-|-|-|
-|<img width="416" alt="Login" src="https://user-images.githubusercontent.com/59905688/200771414-a12d641a-319c-41e1-97d3-89eb7e979f54.png">|<img width="416" alt="Main" src="https://user-images.githubusercontent.com/59905688/200771712-bd4a7185-585f-45a3-bdb3-cf076efba9e1.png">|<img width="416" alt="Tweet" src="https://user-images.githubusercontent.com/59905688/200773213-6ce63846-a2f0-4fab-bafe-aa027195edd9.png">|<img width="416" alt="SearchUser" src="https://user-images.githubusercontent.com/59905688/200773242-a36670d1-ccd8-4234-8cd6-c20f0158c21c.png">|<img width="416" alt="Notification" src="https://user-images.githubusercontent.com/59905688/200773370-c185b3c9-fc7c-433b-9c0b-f342467619cb.png">|<img width="416" alt="EditProfile" src="https://user-images.githubusercontent.com/59905688/200773450-c840ca60-069e-473e-b800-1ecbd4e1fcfe.png">|<img width="416" alt="Profile" src="https://user-images.githubusercontent.com/59905688/200773499-240be581-66c3-4ef2-b7db-a5d7b7cbfdac.png">|
+<img width="1440" alt="1" src="https://user-images.githubusercontent.com/59905688/200775732-f4787f9b-9e30-423d-89df-beb04c393bd8.png">
+<img width="1440" alt="2" src="https://user-images.githubusercontent.com/59905688/200775781-696f8fb6-09e4-4c2b-b60d-08e34f4bcd96.png">
 
 ## Feature-1. 
 
