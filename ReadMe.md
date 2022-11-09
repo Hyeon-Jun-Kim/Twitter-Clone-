@@ -1,40 +1,26 @@
-# Twitter Clone Project
-> Twitter iOS Clone | Swift 5/Firebase | No Storyboards | MVVM
+# Water For Coffee
+> Brewing water chemistry log Application | Swift 5/CoreData | No Storyboards | MVC
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+![background](./background.png) 
 
-Swift 5, Firebase 및 MVVM 아키텍처를 사용하여 iOS 13용 Twitter Clone 구축 프로젝트
+<img width="1440" alt="AppStore" src="https://user-images.githubusercontent.com/59905688/200632348-2b9642f7-4484-4e08-9b13-4c76824afaa9.png">
 
-![background](./background.jpeg)
-
-![GitHub top language](https://img.shields.io/github/languages/top/Hyeon-Jun-Kim/Programmers.svg?color=darkgreen&logo=swift)  ![GitHub last commit](https://img.shields.io/github/last-commit/Hyeon-Jun-Kim/Programmers.svg?color=cc33ff) 
+![GitHub top language](https://img.shields.io/github/languages/top/Hyeon-Jun-Kim/Programmers.svg?color=darkgreen&logo=swift)  ![GitHub last commit](https://img.shields.io/github/last-commit/Hyeon-Jun-Kim/Programmers.svg?color=cc33ff)
 
 ## 프로젝트 소개
 
-Twitter CloneCoading Project 
+WaterForCoffee는 brewing water chemistry log Application 입니다.
 
-### 사용 기술 및 라이브러리
-- Swift, iOS
-- FireBase
-- CocoaPod(Active Label, SDWebImage)
-- MVVM Pattern
+사용자가 물의 성분을 입력하면 도표를 통해 분석한 데이터를 시각적으로 보여줍니다.
+필터와 부가적인 정보를 함께 저장하여 브루잉에 사용되는 물에 대한 정보를 축적 및 공유하는 기능을 제공합니다.
+
+`Core Data`를 통해 데이터를 관리합니다(CRUD).     
+`MVC`를 적용했습니다.
+`UIKit`을 활용하여 코드로 오토레이아웃을 구현했습니다.
    
-### 구현 기능
-- 로그인 & 회원가입
-- 트윗 작성 & 게시글 좋아요 기능
-- 댓글 & 멘션
-- Tag & HashTag
-- 사용자 검색
-- 프로필 페이지(프로필 정보 수정 & 트윗 필터링)
-- Follow & Unfollow
-- Follow, mention 알림(Notification)
-    
-#### 참여자 : 김현준(iOS Developer) holden.developer@gmail.com(총 1명)
-
-#### 진행 기간 : 2022.10.07 - 2022.11.03 (총 4주) 
-
+- 참여자 : 김현준(iOS Developer) holden.developer@gmail.com, 박성용(iOS Developer) sungyong.park6@gmail.com, 장인희(UI/UX Designer) inheejang@gmail (총 3명)
+         
+- 진행 기간 : 2022.08.23 - 2022.09.29 (총 5주)   
 <br/>
 
 ## Architecture
@@ -42,57 +28,30 @@ Twitter CloneCoading Project
 
 ## Foldering
 ```
-TwitterClone
+TargetWaterForCoffee
 ├── AppDelegate
 ├── ScenDelegate
-├── Model
-│   ├── User
-│   ├── Tweet
-│   └── Notification
-├── View
-│   ├── Profile
-│   │    ├── ProfileHeader
-│   │    ├── ProfileFIlterView
-│   │    ├── ProfileFilterCell
-│   │    ├── EditProfileHeader
-│   │    ├── EditProfileCell
-│   │    └── EditProfileFooter
-│   ├── InputTextView
-│   ├── TweetCell
-│   ├── UserCell
-│   ├── TweetHeader
-│   ├── ActionSheetCell
-│   └── NotificationCell
-├── ViewModel
-│   ├── TweetViewModel
-│   ├── ProfileHeaderViewModel
-│   ├── UploadTweetViewModel
-│   ├── ActionSheetViewModel
-│   ├── NotificationViewModel
-│   └── EditProfileViewModel
-├── Controller
-│   ├── Authentication
-│   │    ├── LoginController
-│   │    └── RegisteractionController
-│   ├── MainTabController
-│   ├── FeedController
-│   ├── SearchController
-│   ├── NotificationsController
-│   ├── ConversationsController
-│   ├── UploadTweetController
-│   ├── ProfileController
-│   ├── TweetController
-│   └── EditProfileController
-├── API
-│   ├── AuthService
-│   ├── UserService
-│   ├── TweerService
-│   └── NotificationService
+├── Controllers
+│   ├── CafeDetailViewController
+│   ├── AddDataViewController
+│   ├── DataDetailController
+│   ├── DataDetailShareController
+│   ├── DataDetailUpDelController
+│   └── InfoViewController
+├── Views
+│   ├── DataTableHeaderUIView
+│   ├── DataTableViewCell
+│   ├── AddDataTableViewCell
+│   ├── InfoTableViewCell
+│   └── LogoUIView
+├── Models
+│   ├── CafeDetail+CoreDataClass
+│   └── CafeDetail+CoreDataProperties
 └── Utils
     ├── Extentensions
-    ├── Utilities
-    ├── Constants
-    └── ActionSheetLauncher
+    ├── CheckGraphData
+    ├── DateManager
+    └── CoreDataManager
 ```
 
 ## Feature-1. 데이터 목록화면 구현
@@ -109,3 +68,23 @@ TwitterClone
 - 문제점 :  각각의 Cell이 갖는 데이터(Alkalinity, Hardness)가 세가지 표준(SCA, SCAE, ColonaDashwood & Hendon)을 얼마나 충족하는지 시각적으로 그래프 위에 표시되어야 하지만 Auto Layout의 특성상 기기가 달라지면 Graph의 사이즈가 달라져 점의 위치가 정확하게 표시되지 않는 문제가 발생했습니다.
 - 해결방안 :  그래프 위에 점이 표시되는 영역의 사이즈를 갖는 View를 추가하고 위치를 고정하였습니다. 또한 최대 입력값의 좌표인 (120, 200)의 위치에 점이 위치할 때의 값을 찾아 각각 나누어 x축과 y축의 한칸의 이동값을 찾아 곱하여 이동시키는 방식으로 문제를 해결하였습니다.
            (* Ver 2.0 에서 비율을 구하여 곱해주는 방식으로 수정 예정입니다.)
+
+## Feature-2. 데이터 추가화면 구현
+
+### UI
+<img width="608" alt="스크린샷 2022-11-09 오전 3 03 02" src="https://user-images.githubusercontent.com/59905688/200641324-54adad09-87b3-413e-8d61-393f90e92faa.png">
+
+### 2️⃣ Trouble Shooting
+####  IPhone 8에서 tableView가 전부 보이지 않는 문제
+- 문제점 : `Save Button`의 위치값을 고정해두어 Frame의 높이가 상대적으로 낮은 기기에서 TabelVew를 가리는 현상이 발생함
+- 해결방법 : Frame의 높이값의 1/4만큼 하단에서 떨어지도록 비율을 구하여 위치시켜 해결함
+
+## Feature-3. 데이터 상세화면 구현
+
+### UI
+<img width="971" alt="스크린샷 2022-11-09 오전 3 07 09" src="https://user-images.githubusercontent.com/59905688/200642055-e7abae5d-2e43-4d43-92dd-cc542026cd7a.png">
+
+### Trouble Shooting
+#### 정보 수정 시 잦은 화면 전환으로 딜레이가 발생하는 문제
+- 문제점 :  초기 UI 설계는 상세 데이터 페이지(`DataDetailController`)에서 정보 수정을 할 때 팝업창이 보여지게 되며 수정 데이터를 입력 후 저장을 하는 방식이었다. 수정된 데이터를 다시 불러와 상세 데이터 페이지에서 보여지도록 하는 과정에서 작은 딜레이가 발생하였고 사용자 편의성이 떨어진다 느껴져 다른 방식을 고민하게 되었다.
+- 해결방안 :  새로운 팝업창을 띄우지 않고 상세 데이터 페이지에서 데이터를 보여주는 `UITextView`의 `.isEditable` 속성과 `keyboardWillShow` 함수를 통해 페이지 내에서 즉각적인 정보 수정이 가능하도록 하여 해결하였다.
