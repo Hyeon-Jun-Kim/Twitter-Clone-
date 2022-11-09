@@ -91,7 +91,7 @@ TwitterClone
 ### UI
 
 |1. Login |2. Main |3. Tweet |4. Search User |5. Notification |6. Profile |7. Edit Profile |
-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 |<img width="361" alt="스크린샷 2022-11-09 오후 4 37 19" src="https://user-images.githubusercontent.com/59905688/200768108-9d2d50b9-500b-444f-9feb-c7e2ed6c6dde.png">|
 <img width="363" alt="스크린샷 2022-11-09 오후 4 37 53" src="https://user-images.githubusercontent.com/59905688/200768177-51171885-e207-4a74-b146-a1a0986908eb.png">|
 <img width="361" alt="스크린샷 2022-11-09 오후 4 38 18" src="https://user-images.githubusercontent.com/59905688/200768228-4a1a7994-6bb6-46d2-9381-ed36362010d3.png">|
