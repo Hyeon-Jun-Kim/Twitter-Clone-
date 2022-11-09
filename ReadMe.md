@@ -92,14 +92,102 @@ TwitterClone
 <img width="1440" alt="1" src="https://user-images.githubusercontent.com/59905688/200775732-f4787f9b-9e30-423d-89df-beb04c393bd8.png">
 <img width="1440" alt="2" src="https://user-images.githubusercontent.com/59905688/200775781-696f8fb6-09e4-4c2b-b60d-08e34f4bcd96.png">
 
-## Feature-1. 
+## Learning content. 
 
-### Trouble Shooting
-#### Table View cell Event 문제
-- 문제점 :  특정 행을 선택했을 때 데이터가 그래프상에 어디에 위치하는지 보여주는 기능과 상세 데이터를 볼수 있는 화면으로 이동하는 두가지 기능을 가져야 했습니다. 처음 화면이 로드되었을 때 첫번째 행이 자동으로 활성화 되고 다른 행이 선택되었을 때 accessory가 남아있는 오류가 발생했습니다.
-- 해결방안 :  cell이 선택되었을 때 발생하는 이벤트를 내부에서 if문으로 나누어 해당 행의 활성화 유무를 판단하고 비활성 상태였을 경우 첫번째 행을 비활성화 한 뒤 `NotificationCenter` 를 통해 cell에서 호출한 함수가 동작하여 Graph 위에 점을 표시하도록 구현했습니다. 이후 한번 더 선택되었을 때 데이터와 함께 데이터 상세 페이지(`dataDetailController`)를 present 합니다.
+- MVVM Design Pattern
+    +  Model, View, ViewModel, Controller로 나누어 MVC Pattern의 가장 큰 문제점인 Massive Controller를 방지하고 유지 보수가 용이하도록 구현했습니다.
+    
+- 로그인 데이터 메모리에 저장
+    + Login 페이지에서 로그인 시 로그인 정보를 메모리에 저장하여 App 종료 후 다시 실행되었을 때 로그인 여부를 확인 후 화면을 로드하도록 구현했습니다.
+    + Code: `<MainTapController>`
+        
+        ```swift
+        func authenticateUserAndConfugureUI() {
+              if Auth.auth().currentUser == nil { // User is Not loggen in
+                  DispatchQueue.main.async {
+                      let nav = UINavigationController(rootViewController: LoginController())
+                      nav.modalPresentationStyle = .fullScreen
+                      self.present(nav, animated: true, completion: nil)
+                  }
+              } else { // User is loggen in
+                  configeureViewControllers()
+                  configureUI()
+                  fetchUser()
+              }
+        ```
+        
+- UITapGestureRecognizer
+    + UIImageView 와 같은 ActionHandler가 별도로 없는 객체에 제스처가 입력되는것을 감지할 수 있도록 하여 보다 다양한 객체와 사용자가 상호 작용이 가능하도록 구현했습니다.
+    + Code: `<TweetHeader>`
+        
+        ```swift
+        private lazy var profileImageView: UIImageView = {
+                let iv = UIImageView()
+                iv.contentMode = .scaleAspectFit
+                iv.clipsToBounds = true
+                iv.setDimensions(width: 48, height: 48)
+                iv.layer.cornerRadius = 48 / 2
+                iv.backgroundColor = .twitterBlue
+                
+                let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
+                iv.addGestureRecognizer(tap)
+                iv.isUserInteractionEnabled = true
+                
+                return iv
+            }()
+        ```
 
-#### Cell 값에 따라 Graph 위의 점이 정확하게 표시되지 않는 문제
-- 문제점 :  각각의 Cell이 갖는 데이터(Alkalinity, Hardness)가 세가지 표준(SCA, SCAE, ColonaDashwood & Hendon)을 얼마나 충족하는지 시각적으로 그래프 위에 표시되어야 하지만 Auto Layout의 특성상 기기가 달라지면 Graph의 사이즈가 달라져 점의 위치가 정확하게 표시되지 않는 문제가 발생했습니다.
-- 해결방안 :  그래프 위에 점이 표시되는 영역의 사이즈를 갖는 View를 추가하고 위치를 고정하였습니다. 또한 최대 입력값의 좌표인 (120, 200)의 위치에 점이 위치할 때의 값을 찾아 각각 나누어 x축과 y축의 한칸의 이동값을 찾아 곱하여 이동시키는 방식으로 문제를 해결하였습니다.
-           (* Ver 2.0 에서 비율을 구하여 곱해주는 방식으로 수정 예정입니다.)
+- CustomModal
+    + 이전 WaterForCoffee프로젝트를 진행할 때 Custom Modal을 만든 방식은 View 자체의 높이값을 제한하고 이외의 영역에 Tap Gesture가 발생했을 때 이를 감지하고 View를 닫는 방법으로 구현했습니다.
+    + 이번 프로젝트에서는 VIew 내부에 검은 화면 영역을 담당하는 blackView 위에 TableView를 포함한 footerView를 더하였습니다. blackView에 `.addGestureRecognizer` 를 통해 View를 닫도록 하여 다양한 방법으로 Custom Modal을 구현할 수 있다는 것을 배웠습니다.
+    + Code : `<ActionSheetLauncher>`
+        
+        ```swift
+        private lazy var blackView: UIView = {
+                let view = UIView()
+                view.alpha = 0
+                view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+                
+                let tap = UITapGestureRecognizer(target: self, action: #selector(handleDismissal))
+                view.addGestureRecognizer(tap)
+                
+                return view
+            }()
+            
+            private lazy var footerView: UIView = {
+                let view = UIView()
+                
+                view.addSubview(cancelButton)
+                cancelButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+                cancelButton.anchor(left: view.leftAnchor, right: view.rightAnchor,
+                                    paddingLeft: 12, paddingRight: 12)
+                cancelButton.centerY(inView: view)
+                cancelButton.layer.cornerRadius = 50 / 2
+                
+                return view
+            }()
+        ```
+
+- SDWebImage Library
+    + FireBase에 업로드한 이미지를 URL을 통해 비동기적으로 받아와 캐싱하여 사용할 수 있도록 하는 Library를 활용하였습니다. 이를 통해 Web에서 이미지를 받아오는 속도를 줄일 수 있었습니다.
+    + Code: `<FeedController>`
+        
+        ```swift
+        func configureLeftBarButton() {
+                guard let user = user else { return }
+                
+                let profileImageView = UIImageView()
+                profileImageView.setDimensions(width: 32, height: 32)
+                profileImageView.layer.cornerRadius = 32 / 2
+                profileImageView.layer.masksToBounds = true
+                profileImageView.isUserInteractionEnabled = true
+                
+                let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTap))
+                profileImageView.addGestureRecognizer(tap)
+                
+                profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+                
+                navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+            }
+        ```
+
